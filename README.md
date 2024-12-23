@@ -1,5 +1,27 @@
 # MicroPython - Raspberry Pi Pico RP 2350
 
+## Gold and Silver Rates Display
+OLED display module (SSD1306 micro-controller) for the size of 0.96" and 128x64 pixel black background and Blue foreground colour display.
+
+- Current Time (24 hours format) - refresh for every second
+- Current Day and Date with Month information - refresh for every day
+- Gold and Silver rates from REST API - refresh every day specific intervals
+  - GET https://api.saganavis.xyz/v1/rates/goldRates
+  - API returns JSON format
+
+````
+{
+  "date": "2024-12-22",
+  "gold22": 7100,
+  "gold24": 7745,
+  "silver": 99,
+  "lastUpdated": "2024-12-23 09:00:15",
+  "currentDateTime": "2024-12-23 14:48:02"
+}
+````
+
+![plot](./docs/OLED_0.96_SSD_1306.jpg)
+
 ## Communication Protocols
 I2C (Inter-Integrated Circuit) communication protocols used in embedded systems and IoT devices.
 I2C uses two wires, SDA and SCL, for data transmission and synchronization.
