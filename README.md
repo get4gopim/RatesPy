@@ -1,6 +1,9 @@
 # MicroPython - Raspberry Pi Pico RP 2350
 
 ## Gold and Silver Rates Display
+
+### OLED Display Module 0.96"
+
 OLED display module (SSD1306 micro-controller) for the size of 0.96" and 128x64 pixel black background and Blue foreground colour display.
 
 - Current Time (24 hours format) - refresh for every second
@@ -21,6 +24,14 @@ OLED display module (SSD1306 micro-controller) for the size of 0.96" and 128x64 
 ````
 
 ![plot](./docs/OLED_0.96_SSD_1306.jpg)
+
+### LCD Blue Backlight Display Module 20x4
+
+- SIZE: 20×4 (4 Rows and 20 Characters per Row)
+- Operate with 5V DC
+- Use the `lcd_main.py` to change to `main.py` in order to work
+
+![plot](./docs/LCD_20x4_display.jpg)
 
 ## Communication Protocols
 I2C (Inter-Integrated Circuit) communication protocols used in embedded systems and IoT devices.
@@ -58,5 +69,22 @@ Starting program should be in the name of "main.py". There are 2 main programs:
 - For ground use the GND (black colour) GPIO pin.
 
 ![plot](./docs/pico-2-r4-pinout.svg)
+
+## Python Libraries
+
+### Schedule
+To display the time and rate and refresh with particular intervals.
+
+### asyncio
+Asynchronous way to fetch the REST api and update the display.
+
+### logging
+Log the information using DEBUG, INFO, WARN, ERROR messages.
+
+### ntptime
+Network time to get from internet. This will update the RTC local module and use the current time.
+
+### ssd1306
+OLED display module library with basic font and function.
 
 
