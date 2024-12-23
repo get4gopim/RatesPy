@@ -24,7 +24,7 @@ log = logging.getLogger(__name__)
 
 wifi = network.WLAN(network.STA_IF)
 wifi.active(True) #active WIFI interface
-wifi.connect("B3-204-4G", "gna732KS")
+wifi.connect("ssid", "*******")
 
 settime()
 rtc = machine.RTC()
