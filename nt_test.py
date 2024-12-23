@@ -4,7 +4,7 @@ import time
 
 wifi = network.WLAN(network.STA_IF)
 wifi.active(True) #active WIFI interface
-wifi.connect("B3-204-4G", "gna732KS")
+wifi.connect("ssid", "******")
 ntptime.host = "in.pool.ntp.org"
 
 def connect_network():
